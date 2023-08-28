@@ -317,7 +317,7 @@ const ImmediatelyCall = () => {
     return (
         <>
             <Wrappers style={{
-                height: '100vh',
+                height: `${100 * vh}px`,
             }}>
                 {windowStep == 0 &&
                     <>

@@ -3,15 +3,17 @@ import { m } from 'framer-motion'
 import { useRouter } from 'next/router';
 import { varFade } from 'src/components/animate';
 import { Title, Wrappers } from 'src/components/elements/styled-components';
+import { useVh } from 'src/hooks/useVh';
 
 const PayComponent = () => {
 
+    const vh = useVh();
     const router = useRouter();
 
     return (
         <>
             <Wrappers style={{
-                height: '100vh',
+               height: `${100 * vh}px`,
             }}>
 
                 <m.div variants={varFade().inRight}>
