@@ -2,7 +2,7 @@
 // ----------------------------------------------------------------------
 
 export const defaultSettings = {
-  themeMode: 'light',// dark
+  themeMode: 'dark',// dark
   themeDirection: 'ltr',
   themeContrast: 'default',
   themeLayout: 'horizontal',

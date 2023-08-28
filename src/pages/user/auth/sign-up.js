@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import _, { shuffle } from "lodash";
 import { Countdown } from "src/utils/function";
 import { useRef } from "react";
+import { useVh } from "src/hooks/useVh";
 const formatActiveStepTitle = (title, sub_title) => {
     return {
         title,
@@ -39,6 +40,7 @@ const terms_and_conditions_list = [
 ]
 const SignUp = () => {
 
+    const vh = useVh();
     const router = useRouter();
     const [windowStep, setWindowStep] = useState(0);
     const [activeStep, setActiveStep] = useState(0);
@@ -160,10 +162,11 @@ const SignUp = () => {
 
         return true;
     }
+   
     return (
         <>
             <Wrappers style={{
-                height: '100vh',
+                height: `${100 * vh}px`,
             }}>
                 {windowStep == 0 &&
                     <>
@@ -503,7 +506,7 @@ const SignUp = () => {
                                         }}>
                                             {shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, '', '']).map((itm) => (
                                                 <>
-                                                    <Button style={{ width: '25%', height: '72px' }}
+                                                    <Button style={{ width: '25%', height: '72px', fontSize:themeObj.font_size.size6 }}
                                                         disabled={typeof itm != 'number'}
                                                         onClick={() => {
                                                             if (activeStep == 7) {
@@ -566,7 +569,7 @@ const SignUp = () => {
                     }
                 }}
             >
-                {selectNewsAgencyOpen == 'news_ agency_type' &&
+                {selectNewsAgencyOpen == 'news_agency_type' &&
                     <>
                         <Row style={{ alignItems: 'center', justifyContent: 'space-between', padding: '1rem' }}>
                             <Title style={{ margin: '0' }}>통신사 선택</Title>

@@ -41,6 +41,7 @@ const App = (props) => {
       setHeadData(head_data)
     }
   }, [])
+
   return (
     <>
       <Head>

@@ -10,6 +10,7 @@ import { varFade } from "src/components/animate";
 import styled from "styled-components";
 import SelectAddress from "src/views/user/SelectAddress";
 import PayComponent from "src/views/user/PayComponent";
+import { useVh } from "src/hooks/useVh";
 
 const SelectText = styled.div`
 margin: 1.5rem auto 0.5rem 1rem;
@@ -108,7 +109,7 @@ let card_company_list = [
 ]
 const ImmediatelyCall = () => {
     const router = useRouter();
-
+    const vh = useVh();
     const [windowStep, setWindowStep] = useState(0);
     const [activeStep, setActiveStep] = useState(0);
     const [notWantWelcome, setNotWantWelcome] = useState(false);
@@ -234,7 +235,7 @@ const ImmediatelyCall = () => {
         return (
             <>
                 <Wrappers style={{
-                    height: '100vh',
+                    height: `${100 * vh}px`,
                 }}>
                     <m.div variants={varFade().inRight}>
                         <Title>이전 설정 확인</Title>
