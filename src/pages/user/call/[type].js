@@ -128,7 +128,7 @@ const ImmediatelyCall = () => {
     const [isConfirmPatientCondition, setIsConfirmPatientCondition] = useState(false);
     const [wantCheckPatientCondition, setWantCheckPatientCondition] = useState(false);
     const [isOpenAddressComponent, setIsOpenAddressComponent] = useState(false);
-    const [isOpenPayComponent, setIsOpenPayComponent] = useState(true);
+    const [isOpenPayComponent, setIsOpenPayComponent] = useState(false);
     const [selectAddress, setSelectAddress] = useState(undefined);
     const [payType, setPayType] = useState(undefined);
     const [cardCompanyType, setCardCompanyType] = useState(undefined);
